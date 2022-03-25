@@ -1,16 +1,15 @@
 <template>
-    <router-view></router-view>
-
-    
+    <div>
+        CHI SIAMO
+    </div>
 </template>
 
 <script>
 export default {
-    name: 'Main',
-
+    name: 'About'
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
