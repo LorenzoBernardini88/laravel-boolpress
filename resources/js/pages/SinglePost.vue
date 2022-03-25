@@ -28,6 +28,10 @@ export default {
         .then((api)=>{
             this.posts = api.data;
         })
+        .catch((error)=>{
+            //handle
+            this.$router.push({name:'page-404'})
+        })
     }
 }
 </script>
