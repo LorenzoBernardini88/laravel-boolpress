@@ -27,8 +27,10 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index')
         ->name('home');
         Route::resource('/posts','PostController');
+        Route::patch("comments/{comment}","CommentsController@update")->name('comments.update');
+        Route::delete("comments/{comment}","CommentsController@destroy")->name('comments.destroy');
     });
 
-    Route::get("{any?}", function() {
-        return view("front");
+Route::get("{any?}", function() {
+    return view("front");
     })->where("any", ".*");
